@@ -19,7 +19,7 @@ var base = {
 
 var paths = {
 	html: {
-		src: base.src + 'html/*.html',
+		src: base.src + 'html/**/*.html',
 		templates: base.src + 'html/templates/',
 		dist: base.dist
 	},
