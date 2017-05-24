@@ -1,0 +1,13 @@
+{  
+	"pages": [  
+		{  
+			"name": "header"
+		},
+		{  
+			"name": "hero"
+		},
+		{  
+			"name": "feature block"
+		}
+	]
+}
