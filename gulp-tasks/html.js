@@ -9,7 +9,7 @@
 
 module.exports = function (base, paths, config, gulp, plugins, del) {
 	return function () {
-		gulp.src(paths.html.src)
+		gulp.src([paths.html.src, '!' + paths.html.templates + '**/*html'])
 		.pipe(plugins.data(function(file) {
 			return require('.' + paths.data.src);
 		}))
