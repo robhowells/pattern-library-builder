@@ -1,0 +1,30 @@
+{% set pageTitle = "Pattern Library Template" %}
+{% extends "layouts/detail.html" %}
+
+{% block content %}
+	
+		{# Loops through all the pages and splits them into blocks of 6 #}
+
+		{% for page in pages %}
+
+			{% if loop.first %}
+			<div>
+			<ul>
+			{% endif %}
+
+				{% set componentName = page.name | capitalize %}
+				{% set componentUrl = page.name | replace(" ", "-") %}
+				<li><a href="{{componentUrl}}.html">{{componentName}}</a></li>
+
+			{% if loop.last or loop.index % 6 == 0 %}
+			</ul>
+			</div>
+				{% if loop.last == false %}
+				<div>
+				<ul>
+				{% endif %}
+			{% endif %}
+
+		{% endfor %}
+		
+{% endblock %}
